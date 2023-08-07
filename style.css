@@ -1,0 +1,39 @@
+#one
+.cards {
+  display: flex;
+   
+}
+.two {
+    display: flex;
+    align-items: center;
+ }
+ 
+ #search-input {
+    padding: 5px; /* Adjust padding to control the height */
+    height: 25px; /* Adjust the height */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    flex: 1;
+    margin-right: 10px;
+ }
+ 
+ #button {
+    padding: 8px 12px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+ }
+
+.box {
+    align-items: flex-end;
+    width: 100px;
+    height: 150px;
+    background-color: rgb(50, 50, 102);
+    color: white;
+    text-align: center;
+    line-height: 150px;
+    margin: 10px;
+    border: 1px;
+}
