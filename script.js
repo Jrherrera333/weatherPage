@@ -1,62 +1,41 @@
-//let myApiKey = "51e95e4f7bc194421cb48021aec89f8b";
+
 let button1 = document.querySelector("button");
 let input = document.querySelector("#search-input");
-
+//grab text from text box
 let textContent = input.textContent;
-
+//add the click ability to the button
 button1.addEventListener("click", function(event){
 event.preventDefault();
-})
 
-fetch("http://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid=51e95e4f7bc194421cb48021aec89f8b")
+//retrieve data from API
+fetch("http://api.openweathermap.org/geo/1.0/direct?q=Dallas&limit=5&appid=51e95e4f7bc194421cb48021aec89f8b")
 .then(response => response.json())
 .then(citiesFound =>{
     let firstCity = citiesFound[0];
     console.log(firstCity.lat);
     console.log(firstCity.lon);
 
-    return fetch('https://api.openweathermap.org/data/2.5/forecast?lat=${firstCity.lat}&lon=${firstCity.lon}&appid=51e95e4f7bc194421cb48021aec89f8b')
+    return fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${firstCity.lat}&lon=${firstCity.lon}&appid=51e95e4f7bc194421cb48021aec89f8b`)
 })
 
-
+//return the promise
 .then(response => response.json())
 .then(data => {
     console.log(data)
 });
 
-// fetch("http://api.openweathermap.org/geo/1.0/direct?q=London&limit=5&appid=51e95e4f7bc194421cb48021aec89f8b")
-//   .then(response => response.json())
-//   .then(citiesFound => {
-//     let firstCity = citiesFound[0];
-//     console.log(firstCity.lat);
-//     console.log(firstCity.lon);
-
-//     return fetch(`https://api.openweathermap.org/data/2.5/forecast?lat=${firstCity.lat}&lon=${firstCity.lon}&appid=51e95e4f7bc194421cb48021aec89f8b`);
-//   })
-//   .then(response => response.json())
-//   .then(data => {
-//     console.log(data);
-//   })
-//   .catch(error => {
-//     console.error('Error:', error);
-//   });
-
-
+//store the value of button and input
 let citiesFound = {
-    lat: lat.value,
-    lon: lon.value,
+    button1: button1.value,
+    input: input.value.trim()
 
 }
-
-localStorage.setItem("citiesFound", JSON.stringify(studentGrade));
+//store data in local storage
+localStorage.setItem("citiesFound", JSON.stringify(citiesFound));
 renderMessage();
 
-;
-
+});
+//retrieve data from local storage
 function renderMessage() {
-  var lastGrade = JSON.parse(localStorage.getItem("citiesFound"));
-  if (lastGrade !== null) {
-    document.querySelector(".message").textContent = lastGrade.student + 
-    " received a/an " + lastGrade.grade
-  }
+  let cities = JSON.parse(localStorage.getItem("citiesFound"));
 }

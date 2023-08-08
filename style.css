@@ -1,4 +1,10 @@
-#one
+.header{
+    padding: 20px;
+    text-align: center;
+    background-color: #3498db;
+    color: rgb(223, 201, 176);
+    font-size: 40px;
+}
 .cards {
   display: flex;
    
