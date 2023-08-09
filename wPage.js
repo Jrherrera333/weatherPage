@@ -42,11 +42,11 @@ fetch("http://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&limit=5&a
     temp.textContent = "Temperature: " + data.list[0].main.temp
     wind.textContent = "Wind: " + data.list[0].wind.speed
     humidity.textContent = "Humidity: " + data.list[0].main.humidity
-    box1.textContent = "box1: " + data.list[0].main.temp
-    box2.textContent = "box2: " + data.list[8].main.temp
-    box3.textContent = "box3: " + data.list[16].main.temp
-    box4.textContent = "box4: " + data.list[24].main.temp
-    box5.textContent = "box5: " + data.list[32].main.temp
+    box1.textContent = "box1: " + data.list[0].main.temp + data.list[0].wind.speed + data.list[0].main.humidity
+    box2.textContent = "box2: " + data.list[8].main.temp + data.list[8].wind.speed + data.list[8].main.humidity
+    box3.textContent = "box3: " + data.list[16].main.temp + data.list[16].wind.speed + data.list[16].main.humidity
+    box4.textContent = "box4: " + data.list[24].main.temp + data.list[24].wind.speed + data.list[24].main.humidity
+    box5.textContent = "box5: " + data.list[32].main.temp + data.list[32].wind.speed + data.list[32].main.humidity
 
 
 });
