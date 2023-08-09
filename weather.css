@@ -1,45 +1,63 @@
 .header{
-    padding: 20px;
+    padding: 50px;
     text-align: center;
     background-color: #3498db;
     color: rgb(223, 201, 176);
     font-size: 40px;
 }
-.cards {
-  display: flex;
-   
-}
-.two {
-    display: flex;
-    align-items: center;
- }
- 
- #search-input {
-    padding: 5px; /* Adjust padding to control the height */
-    height: 25px; /* Adjust the height */
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    flex: 1;
-    margin-right: 10px;
- }
- 
- #button {
-    padding: 8px 12px;
-    background-color: #3498db;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
- }
 
-.box {
-    align-items: flex-end;
-    width: 100px;
-    height: 150px;
-    background-color: rgb(50, 50, 102);
-    color: white;
-    text-align: center;
-    line-height: 150px;
-    margin: 10px;
-    border: 1px;
+.container{
+    display: grid;
+    row-gap: 100px;
+    column-gap: 50px;
+    grid-template-columns: 1fr 2fr;
+   grid-template-rows: 100px 200px;
+
 }
+
+
+#box1{
+    height: 80px;
+    width: 20;
+    color: white;
+    background-color: rgb(74, 74, 121);
+    gap: 20px;
+    padding: 20px;
+}
+#box2{
+    height: 80px;
+    width: 20;
+    color: white;
+    background-color: rgb(191, 43, 119);
+    gap: 20px;
+    padding: 20px;
+}
+#box3{
+    height: 80px;
+    width: 20;
+    color: white;
+    background-color: rgb(74, 74, 121);
+    gap: 20px;
+    padding: 20px;
+}
+#box4{
+    height: 80px;
+    width: 20;
+    color: white;
+    background-color: rgb(191, 43, 119);
+    gap: 20px;
+    padding: 20px;
+}
+#box5{
+    height: 80px;
+    width: 20;
+    color: white;
+    background-color: rgb(74, 74, 121);
+    gap: 20px;
+    padding: 20px;
+}
+
+
+
+
+
