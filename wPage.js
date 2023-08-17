@@ -10,17 +10,32 @@ let box2 = document.querySelector("#box2");
 let box3 = document.querySelector("#box3");
 let box4 = document.querySelector("#box4");
 let box5 = document.querySelector("#box5");
-
+let searchedCities = document.querySelector("#searchedCities")
 //grab text from text box
 let textContent = input.textContent;
+let cityArray = JSON.parse(localStorage.getItem("cities")) || []
 //add the click ability to the button
 button1.addEventListener("click", function(event){
 event.preventDefault();
 let cityName = input.value
+if (!cityArray.includes(cityName)){
+    cityArray.push(cityName)
+    localStorage.setItem("cities",JSON.stringify(cityArray))
+}
+getCities()
 getWeather(cityName)
 });
 
+function getCities(){
+    let cityArray = JSON.parse(localStorage.getItem("cities")) || []
+    searchedCities.textContent=""
+    for(let i = 0; i < cityArray.length; i++){
+        let cityBtn = document.createElement('button')
+        cityBtn.textContent = cityArray [i]
+        searchedCities.appendChild(cityBtn)
 
+    }
+}
 function getWeather(cityName){
 
 //retrieve data from API
@@ -66,3 +81,4 @@ renderMessage();
 function renderMessage() {
   let cities = JSON.parse(localStorage.getItem("citiesFound"));
 }
+getCities()
