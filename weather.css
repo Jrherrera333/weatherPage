@@ -1,4 +1,4 @@
-.header{
+.header {
     padding: 50px;
     text-align: center;
     background-color: #3498db;
@@ -6,58 +6,34 @@
     font-size: 40px;
 }
 
-.container{
+.container {
     display: grid;
     row-gap: 100px;
     column-gap: 50px;
     grid-template-columns: 1fr 2fr;
-   grid-template-rows: 100px 200px;
+    grid-template-rows: 100px 200px;
 
 }
 
+.boxes {
+    display: flex;
+}
 
-#box1{
+#box1,
+#box2,
+#box3,
+#box4,
+#box5 {
     height: 80px;
     width: 20;
     color: white;
     background-color: rgb(74, 74, 121);
     gap: 20px;
     padding: 20px;
+    margin-right: 5px;
 }
-#box2{
-    height: 80px;
-    width: 20;
-    color: white;
+
+#box2,
+#box4 {
     background-color: rgb(191, 43, 119);
-    gap: 20px;
-    padding: 20px;
 }
-#box3{
-    height: 80px;
-    width: 20;
-    color: white;
-    background-color: rgb(74, 74, 121);
-    gap: 20px;
-    padding: 20px;
-}
-#box4{
-    height: 80px;
-    width: 20;
-    color: white;
-    background-color: rgb(191, 43, 119);
-    gap: 20px;
-    padding: 20px;
-}
-#box5{
-    height: 80px;
-    width: 20;
-    color: white;
-    background-color: rgb(74, 74, 121);
-    gap: 20px;
-    padding: 20px;
-}
-
-
-
-
-
