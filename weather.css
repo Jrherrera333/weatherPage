@@ -15,8 +15,16 @@
 
 }
 
+#searchedCities{
+    display: flex;
+    flex-direction: column;
+    width: 200px;
+    padding: 10px
+}
+
 .boxes {
     display: flex;
+    
 }
 
 #box1,
@@ -24,6 +32,7 @@
 #box3,
 #box4,
 #box5 {
+    flex-direction: column;
     height: 80px;
     width: 20;
     color: white;
