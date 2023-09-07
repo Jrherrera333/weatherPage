@@ -46,7 +46,7 @@ function getCities(){
 function getWeather(cityName){
 
 //retrieve data from API
-fetch("http://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&limit=5&appid=51e95e4f7bc194421cb48021aec89f8b")
+fetch("https://api.openweathermap.org/geo/1.0/direct?q=" + cityName + "&limit=5&appid=51e95e4f7bc194421cb48021aec89f8b")
 .then(response => response.json())
 .then(citiesFound =>{
     let firstCity = citiesFound[0];
